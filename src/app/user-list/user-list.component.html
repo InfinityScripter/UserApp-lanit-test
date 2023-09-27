@@ -1,0 +1,25 @@
+<h1>Users</h1>
+<table>
+  <thead>
+    <tr>
+      <th (click)="handleSort('id')">ID</th>
+      <th (click)="handleSort('firstName')">First Name</th>
+      <th (click)="handleSort('lastName')">Last Name</th>
+      <th (click)="handleSort('email')">Email</th>
+      <th (click)="handleSort('phone')">Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>
+        <button class="del" (click)="handleDelete(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
